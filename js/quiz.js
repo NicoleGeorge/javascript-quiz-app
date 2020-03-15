@@ -47,9 +47,19 @@ function process(n) {
     if (submitted == sessionStorage.getItem('a' + n + '')) {
         score = score + point;
     }
+
     if (n == total) {
         $('#results').html('<h3>Your Final Score is ' + score + 
       ' out of ' + highest + '</h3><a href = "index.html">Take Quiz Again</a>')
+        if (score == highest) {
+            $('#results').append('<p>You are a Javascript Master!</p>');
+        }
+        else if (score = highest - point || score == highest - point - point){
+            $('#results').append('<p>Good Job!</p>');
+        }
+        else if (score <= 2) {
+            $('#results').append('<p>get practicing!</p>');
+        }
     }
 
     return false;
