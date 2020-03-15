@@ -1,1 +1,5 @@
-console.log("quiz.js is connected");
+$(document).ready(function() {
+      alert(1);
+});
+
+// testing connection - works! //
