@@ -1,6 +1,6 @@
 var score = 0; // set score to 0
 var total = 5; //Total number of questions
-var point = 1; //Points per correct answer
+var point = 2; //Points per correct answer
 var highest = total * point;
 
 //initialiser function
@@ -45,12 +45,14 @@ function process(n) {
     // get input value
     var submitted = $('input[name = q' + n +']:checked').val();
     if (submitted == sessionStorage.getItem('a' + n + '')) {
-        score++;
+        score = score + point;
     }
     if (n == total) {
         $('#results').html('<h3>Your Final Score is ' + score + 
-      ' out of 5.</h3><a href = "index.html">Take Quiz Again</a>')
+      ' out of ' + highest + '</h3><a href = "index.html">Take Quiz Again</a>')
     }
+
+    return false;
 }
 
 // Add an event listener 
