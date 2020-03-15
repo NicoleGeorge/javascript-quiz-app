@@ -36,7 +36,7 @@ $(document).ready(function() {
         process(' ' + current + ' ');
         return false;
     });
-
+    
 //     $('#q1 #submit').click(function(){
 //         $('.questionForm').hide();
 //         process('q1');
