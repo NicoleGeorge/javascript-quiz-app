@@ -1,0 +1,90 @@
+/* BASE STYLES */
+
+body {
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    line-height: 12px;
+}
+
+li {
+    list-style: none;
+    margin: 10px 10px;
+}
+
+button {
+    font-size: 12px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    background-color: #fff465;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    margin: 15px;
+}
+
+button:hover {
+    background-color: #e66f20;
+    color: #fff465;
+}
+
+/* CONTAINER STYLES */
+
+.container {
+    width: 70%;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* HEADER */
+
+header {
+    background: #f7bee3;
+    color: black;
+    font-size: 32px;
+    font-family:'Bungee Shade', cursive;
+    padding: 25px 25px;
+    overflow: auto;
+}
+
+header .name {
+    font-size: 18px;
+    text-align: right;
+    margin-top: 5px;
+}
+/* QUESTION STYLES */
+
+form {
+    margin: 20px 20px;
+}
+
+/* FOOTER STYLES */
+
+footer {
+    background: #f7bee3;
+    color:black;
+    font-family:'Bungee Shade', cursive;
+    padding: 20px 20px;
+    overflow: auto;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+
+    header .name {
+        font-size: 14px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 600;
+        margin-top: 25px;
+    }
+}
