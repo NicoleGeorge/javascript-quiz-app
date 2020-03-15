@@ -22,42 +22,57 @@ $(document).ready(function() {
     // Show first question
     $('#q1').show();
 
-    $('#q1 #submit').click(function(){
-        $('.questionForm').hide();
-        process('q1');
-        $('#q2').show();
-        return false;
-    })
 
-    $('#q2 #submit').click(function(){
-        $('.questionForm').hide();
-        process('q2');
-        $('#q3').show();
-        return false;
-    })
+    // optimising the code - creating a universal click handler to process each question/answer
 
-    $('#q3 #submit').click(function(){
+    $('.questionForm #submit').click(function() {
+       // Get data attributes
+        var current = $(this).parents('form:first').data('question');
+        var next = $(this).parents('form:first').data('question') + 1;
+       //  hide all questions
         $('.questionForm').hide();
-        process('q3');
-        $('#q4').show();
+       // show next question
+       $('#q' + next + ' ').show();
+        process(' ' + current + ' ');
         return false;
-    })
+    });
 
-    $('#q4 #submit').click(function(){
-        $('.questionForm').hide();
-        process('q4');
-        $('#q5').show();
-        return false;
-    })
+//     $('#q1 #submit').click(function(){
+//         $('.questionForm').hide();
+//         process('q1');
+//         $('#q2').show();
+//         return false;
+//     })
 
-    $('#q5 #submit').click(function(){
-        $('.questionForm').hide();
-        process('q5');
-        $('#results').show();
-        return false;
-    })
+//     $('#q2 #submit').click(function(){
+//         $('.questionForm').hide();
+//         process('q2');
+//         $('#q3').show();
+//         return false;
+//     })
 
-});
+//     $('#q3 #submit').click(function(){
+//         $('.questionForm').hide();
+//         process('q3');
+//         $('#q4').show();
+//         return false;
+//     })
+
+//     $('#q4 #submit').click(function(){
+//         $('.questionForm').hide();
+//         process('q4');
+//         $('#q5').show();
+//         return false;
+//     })
+
+//     $('#q5 #submit').click(function(){
+//         $('.questionForm').hide();
+//         process('q5');
+//         $('#results').show();
+//         return false;
+//     })
+
+// });
 
 // Processing the answers: compare the submitted answers against the correct answers
 
@@ -100,4 +115,4 @@ function process(q) {
 
 // Add an event listener 
 
-window.addEventListener('load', init, false);
+window.addEventListener('load', init, false);})
