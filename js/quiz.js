@@ -21,16 +21,17 @@ $(document).ready(function() {
 
     // Intro Section first 
     $('.intro').show();
+    $('#play').click(function(){
+    
+    // show first Qu. when button is clicked
+        $('#q1').show();
+    // hide intro section when button is clicked
+        $('.intro').hide();
+    });
 
-    // BELOW IS A WORK IN PROGRESS //   
-
+   
     // Added into section - now reconfiguring to show 
-    // first Qu. when button is clicked
 
-    // $('#play').click();
-    //     $('#q1').show();
-
-    // $('#q1').show();
 
 
     // optimising the code - creating a universal click handler to process each question/answer
