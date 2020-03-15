@@ -29,10 +29,6 @@ $(document).ready(function() {
         $('.intro').hide();
     });
 
-   
-    // Added into section - now reconfiguring to show 
-
-
 
     // optimising the code - creating a universal click handler to process each question/answer
 
