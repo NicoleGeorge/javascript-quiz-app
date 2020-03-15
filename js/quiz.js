@@ -19,8 +19,18 @@ $(document).ready(function() {
     // Hiding all questions//
     $('.questionForm').hide();
 
-    // Show first question
-    $('#q1').show();
+    // Intro Section first 
+    $('.intro').show();
+
+    // BELOW IS A WORK IN PROGRESS //   
+
+    // Added into section - now reconfiguring to show 
+    // first Qu. when button is clicked
+
+    // $('#play').click();
+    //     $('#q1').show();
+
+    // $('#q1').show();
 
 
     // optimising the code - creating a universal click handler to process each question/answer
@@ -64,6 +74,10 @@ function process(n) {
 
     return false;
 }
+
+//  TIMER FUNCTION
+
+
 
 // Add an event listener 
 

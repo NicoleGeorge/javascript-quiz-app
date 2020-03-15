@@ -6,6 +6,9 @@ body {
     line-height: 12px;
 }
 
+h2 {
+    line-height: 42px;
+}
 h3 {
     font-size: 18px;
     font-family: monospace;
@@ -21,15 +24,6 @@ h3 {
     margin: 20px auto;
     overflow: auto;
 }
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
-}
-
 
 /* HEADER */
 
@@ -47,6 +41,44 @@ header .name {
     text-align: right;
     margin-top: 5px;
 }
+
+/* INTRO PAGE STYLES */
+
+.intro {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    margin: 25px;
+
+}
+
+.fine-print {
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 1.5;
+    border-radius: 0;
+    color: #fff465;
+    background-color:  #e66f20;
+    border-color: transparent;
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: #fff465;
+    color: #e66f20;
+    border-color:#e66f20;
+    border-width: 2px;
+}
+
 /* QUESTION STYLES */
 
 li {
@@ -108,11 +140,30 @@ p {
 footer {
     background: #f7bee3;
     color:black;
-    font-family:'Bungee Shade', cursive;
+    font-family: monospace;
+    font-weight: 400;
     margin-top: 25px;
     padding: 20px 20px;
     overflow: auto;
-    font-size: 16px;
+    font-size: 22px;
+}
+
+.float-left .total {
+    float: left;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* .float-right {
+    float: right;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+} */
+
+.disclaimer {
+    font-family: monospace;
+    font-size: 8px;
+    font-weight: 400;
+    text-align: center;
 }
 
 @media only screen and (max-width: 900px) {
@@ -120,10 +171,36 @@ footer {
         width: 100%;
     }
 
-    header .name {
-        font-size: 14px;
-        font-family: 'Courier New', Courier, monospace;
+    /* .float-left {
+        font-size: 24px;
+        line-height: 5px;
+    } */
+    header .title {
+        font-size: 34px;
+        font-family: 'Bungee Shade', cursive;
         font-weight: 600;
         margin-top: 25px;
+    }
+    header .name {
+        font-size: 18px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 400;
+        margin-top: 25px;
+    }
+
+    .float-left {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .float-right {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    p .disclaimer {
+        font-weight: lighter;
     }
 }

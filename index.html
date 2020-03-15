@@ -16,10 +16,15 @@
     <!-- Main body -->
     <div class="container">
         <header>
-          <div class="float-left">JavaScript Quiz</div>
+          <div class="float-left title">JavaScript Quiz</div>
           <div class="float-right name">by Nicole George</div>
         </header>
       <main>
+        <div class="intro">
+          <h2>Roll up, Roll up, get ready to test your JavaScript Skills!</h2>
+          <p class="fine-print">every player wins a prize*</p>
+          <button id="play" type="button" class="btn">Let's Play</button>
+        </div>
         <!-- Question 1 -->
         <form class="questionForm" id="q1" data-question="1"> <!-- added the data-question to optimise the Javascript code-->
           <h4>1. Computers understand...</h4>
@@ -85,7 +90,9 @@
         <br>
 
         <footer>
-          <div class="float-left">Total: 5 Questions || 2 points per question</div>
+          <div class="float-left total">Total: 5 Qu. | 2 points each</div>
+          <div class="float-right timer">Time: </div>
+          <p class="disclaimer">* the prize is not tangibile, it's the process of learning.</p>
         </footer>
       </main>
 
