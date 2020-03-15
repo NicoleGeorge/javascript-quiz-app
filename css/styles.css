@@ -27,6 +27,13 @@ button:hover {
     color: #fff465;
 }
 
+h3 {
+    font-size: 24px;
+    font-family: monospace;
+    margin: 20px;
+    font-weight: 500;
+}
+
 /* CONTAINER STYLES */
 
 .container {
@@ -42,6 +49,27 @@ button:hover {
 .float-right {
     float: right;
 }
+
+a {
+    color: black;
+    background-color: #69cae8;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 20px 0px;
+}
+
+a:hover{
+    color:  #69cae8;
+    background-color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px 10px;
+    margin: 20px 0px;
+}
+
 
 /* HEADER */
 
@@ -65,6 +93,10 @@ form {
     margin: 20px 20px;
 }
 
+/* RADIO BUTTON STYLING */
+
+/* to be completed last */
+  
 /* FOOTER STYLES */
 
 footer {
