@@ -61,12 +61,12 @@ function process(n) {
         if (score == highest) {
             $('#results').append('<p>You are a Javascript Master!</p>');
         }
-        else if (score = highest - point || score == highest - point - point){
+        else if (score == highest - point) {
             $('#results').append('<p>Good Job!</p>');
-        }
-        else if (score <= 2) {
-            $('#results').append('<p>get practicing!</p>');
-        }
+        } 
+        else if (score = highest - point - point ) {
+            $('#results').append('<p>Keep practicing</p>');
+        }    
     }
 
     return false;
