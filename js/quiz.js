@@ -1,6 +1,6 @@
 var score = 0; // set score to 0
 var total = 5; //Total number of questions
-var point = 2; //Points per correct answer
+var point = 1; //Points per correct answer
 var highest = total * point;
 
 //initialiser function
@@ -64,7 +64,7 @@ function process(n) {
         else if (score == highest - point) {
             $('#results').append('<p>Good Job!</p>');
         } 
-        else if (score = highest - point - point ) {
+        else if (score != highest) {
             $('#results').append('<p>Keep practicing</p>');
         }    
     }
