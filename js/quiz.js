@@ -22,12 +22,18 @@ $(document).ready(function() {
     // Intro Section first 
     $('.intro').show();
     $('#play').click(function(){
-    
+        
     // show first Qu. when button is clicked
         $('#q1').show();
     // hide intro section when button is clicked
         $('.intro').hide();
+  
     });
+
+     $('#play').click(function(){
+         countdown();
+
+     })
 
 
     // optimising the code - creating a universal click handler to process each question/answer
@@ -44,6 +50,26 @@ $(document).ready(function() {
         return false;
     }); 
 
+    //  TIMER FUNCTION
+
+        var timer = 60;
+        var url = 'index.html';
+
+        function countdown () {
+            setTimeout(countdown, 1000);
+            $('#timer').html('You have ' + timer + ' seconds left.');
+            timer --;
+
+            if (timer < 0) {
+                window.location = url;
+                timer = 0;
+            }
+                
+        } 
+
+    // countdown();
+
+          //countdown(); //working - but need to stop it from going into the -ves.
 });
 
 // Processing the answers: compare the submitted answers against the correct answers
@@ -73,7 +99,7 @@ function process(n) {
     return false;
 }
 
-//  TIMER FUNCTION
+
 
 
 
