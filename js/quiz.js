@@ -94,7 +94,7 @@ function process(n) {
             $('#results').append('<p>Good Job!<br><br>you can save your score in a sec!</p>');
         } 
         else if (score != highest) {
-            $('#results').append('<p>Keep practicing<br><br>you save your score in a sec!</p>');
+            $('#results').append('<p>Best to keep practicing<br><br>you save your score in a sec!</p>');
         } 
            
     }
@@ -102,58 +102,21 @@ function process(n) {
     return false;
 }
 
-// High Score - saving username & score to LocalStorage
 
-// var form = document.querySelector('form');
-// var ul = document.querySelector('ul');
-// var button = document.querySelector('button');
-// var input = document.getElementById('#username');
-// var answersArray = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('items')): [];
-
-// localStorage.setItem('score', JSON.stringify(answersArray));
-// var data = JSON.parse(localStorage.getItem('score'));
-
-//     var scoreTally = (text) => {
-//         var li = document.createElement('li');
-//         li.textContent = text;
-//         ul.appendChild(li);
-//     }
-
-//     form.addEventListener('submit', function (e) {
-//         e.preventDefault();
- 
-//         answersArray.push(input.value);
-//         localStorage.setItem('score', JSON.stringify(answersArray));
-//         scoreTally(input.value);
-//         input.value = "";
-// });
-
-//     data.forEach(score => {
-//         scoreTally(score);
-//     });
-
-
-//     button.addEventListener('click', function () {
-//         localStorage.clear();
-//         while (ul.firstChild) {
-//             ul.removeChild(ul.firstChild);
-//         }
-
-//         scoreTally = [];
-//     });
 
 // first attempt - keeping only for reference against new attempt if it works
 
-    // var username = document.getElementById("username");
-    // var saveScoreButton = document.getElementById("saveScoreBtn");
-    // var results = document.getElementById('#results');
-    // var latesScore = localStorage.getItem('latest score');
-    // // results.innerText = latesScore;
+    var username = document.querySelector("username");
+    var saveScoreButton = document.getElementById("saveScoreBtn");
+    var results = document.getElementById('#results');
+    var latestScore = localStorage.getItem('latest score');
+
+    $('#finalScore').append(latestScore);
 
     // username.addEventListener('keyup', () => {
     //     console.log(username.value);
     //     saveScoreBtn.disabled = !username.value;
-    // })
+    //})
 
     // saveHighScore = e => {
     //     // console.log("clicked the save button");
