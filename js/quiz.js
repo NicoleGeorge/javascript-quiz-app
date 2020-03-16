@@ -28,12 +28,21 @@ $(document).ready(function() {
     // hide intro section when button is clicked
         $('.intro').hide();
   
+
     });
 
-     $('#play').click(function(){
-         countdown();
+    // starting timer when Let's Play button clicked
+    $('#play').click(function(){
+        countdown();
+    })
 
-     })
+    //stop timer when Results are shown
+    $('#results').show(function(){
+        $('#timer').stop();
+    })
+
+
+
 
 
     // optimising the code - creating a universal click handler to process each question/answer
@@ -52,7 +61,7 @@ $(document).ready(function() {
 
     //  TIMER FUNCTION
 
-        var timer = 60;
+        var timer = 10;
         var url = 'index.html';
 
         function countdown () {
@@ -61,6 +70,7 @@ $(document).ready(function() {
             timer --;
 
             if (timer < 0) {
+                clearTimeout(countdown);
                 window.location = url;
                 timer = 0;
             }
