@@ -91,6 +91,7 @@ button {
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
+    color:  #e66f20;
     background-color: #fff465;
     text-transform: uppercase;
     padding: 10px 10px;
@@ -131,9 +132,8 @@ p {
     margin: 40px 0 -10px 0;
 }
 
-/* RADIO BUTTON STYLING */
+/* USET INPUT PAGE STYLES */
 
-/* to be completed last */
   
 /* FOOTER STYLES */
 

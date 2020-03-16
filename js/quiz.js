@@ -6,7 +6,7 @@ var highest = total * point;
 //initialiser function
 
 function init() {
-    //setting correct answers - using session storage API 
+    //setting correct answers - using sessionStorage API  
     // syncing up the answers to each question
     sessionStorage.setItem('a1', 'd');
     sessionStorage.setItem('a2', 'c'); 
@@ -27,11 +27,10 @@ $(document).ready(function() {
         $('#q1').show();
     // hide intro section when button is clicked
         $('.intro').hide();
-  
-
+        
     });
 
-    // starting timer when Let's Play button clicked
+    // starting timer when "Let's Play" button clicked
     $('#play').click(function(){
         countdown();
     })
@@ -41,11 +40,7 @@ $(document).ready(function() {
         $('#timer').stop();
     })
 
-
-
-
-
-    // optimising the code - creating a universal click handler to process each question/answer
+    // optimised the code - created a universal click handler to process each question/answer
 
     $('.questionForm #submit').click(function() {
        // Get data attributes
@@ -61,8 +56,8 @@ $(document).ready(function() {
 
     //  TIMER FUNCTION
 
-        var timer = 10;
-        var url = 'index.html';
+        var timer = 20;
+        var url = 'end.html';
 
         function countdown () {
             setTimeout(countdown, 1000);
@@ -76,10 +71,7 @@ $(document).ready(function() {
             }
                 
         } 
-
-    // countdown();
-
-          //countdown(); //working - but need to stop it from going into the -ves.
+     
 });
 
 // Processing the answers: compare the submitted answers against the correct answers
@@ -89,19 +81,20 @@ function process(n) {
     var submitted = $('input[name = q' + n +']:checked').val();
     if (submitted == sessionStorage.getItem('a' + n + '')) {
         score = score + point;
+        localStorage.setItem('latest score', score); // saving score to localStorage
     }
 
     if (n == total) {
         $('#results').html('<h3>Your Final Score is ' + score + 
       ' out of ' + highest + '</h3><a href = "index.html">Take Quiz Again</a>')
         if (score == highest) {
-            $('#results').append('<p>You are a Javascript Master!</p>');
+            $('#results').append('<p>You are a Javascript Master!<br><br>you save your score in a sec!</p>');
         }
         else if (score == highest - point || score == highest - point - point) {
-            $('#results').append('<p>Good Job!</p>');
+            $('#results').append('<p>Good Job!<br><br>you can save your score in a sec!</p>');
         } 
         else if (score != highest) {
-            $('#results').append('<p>Keep practicing</p>');
+            $('#results').append('<p>Keep practicing<br><br>you save your score in a sec!</p>');
         } 
            
     }
@@ -109,8 +102,63 @@ function process(n) {
     return false;
 }
 
+// High Score - saving username & score to LocalStorage
+
+// var form = document.querySelector('form');
+// var ul = document.querySelector('ul');
+// var button = document.querySelector('button');
+// var input = document.getElementById('#username');
+// var answersArray = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('items')): [];
+
+// localStorage.setItem('score', JSON.stringify(answersArray));
+// var data = JSON.parse(localStorage.getItem('score'));
+
+//     var scoreTally = (text) => {
+//         var li = document.createElement('li');
+//         li.textContent = text;
+//         ul.appendChild(li);
+//     }
+
+//     form.addEventListener('submit', function (e) {
+//         e.preventDefault();
+ 
+//         answersArray.push(input.value);
+//         localStorage.setItem('score', JSON.stringify(answersArray));
+//         scoreTally(input.value);
+//         input.value = "";
+// });
+
+//     data.forEach(score => {
+//         scoreTally(score);
+//     });
 
 
+//     button.addEventListener('click', function () {
+//         localStorage.clear();
+//         while (ul.firstChild) {
+//             ul.removeChild(ul.firstChild);
+//         }
+
+//         scoreTally = [];
+//     });
+
+// first attempt - keeping only for reference against new attempt if it works
+
+    // var username = document.getElementById("username");
+    // var saveScoreButton = document.getElementById("saveScoreBtn");
+    // var results = document.getElementById('#results');
+    // var latesScore = localStorage.getItem('latest score');
+    // // results.innerText = latesScore;
+
+    // username.addEventListener('keyup', () => {
+    //     console.log(username.value);
+    //     saveScoreBtn.disabled = !username.value;
+    // })
+
+    // saveHighScore = e => {
+    //     // console.log("clicked the save button");
+    //     e.preventDefault();
+    // }
 
 
 // Add an event listener 
