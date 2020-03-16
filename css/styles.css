@@ -9,6 +9,7 @@ body {
 h2 {
     line-height: 42px;
 }
+
 h3 {
     font-size: 18px;
     font-family: monospace;
@@ -122,6 +123,22 @@ a:hover{
     padding: 15px 15px;
     margin: 30px 0px;
 
+}
+
+#restart a {
+    font-size: 14px;
+    color:  black;
+    font-weight: 500;
+    background-color:  #fff465;
+    padding: 5px 5px;
+}
+
+#restart a:hover {
+    font-size: 14px;
+    color:white;
+    font-weight: 500;
+    background-color: #69cae8;
+    padding: 5px 5px;
 }
 
 form {
