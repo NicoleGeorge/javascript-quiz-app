@@ -131,14 +131,14 @@ function process(n) {
         }
             currentScore.push(userScore);
             document.forms[0].reset();
-            
+
         // to clear the form for the next entries
         // use - document.querySelector('form').reset();
 
-        //for display purposes only - checking that it's working
-        console.warn('added' , {currentScore} );
-        let pre = document.querySelector('#msg pre');
-        pre.textContent = '\n' + JSON.stringify(currentScore, '\t', 2);
+        // //for display purposes only - checking that it's working
+        // console.warn('added' , {currentScore} );
+        // let pre = document.querySelector('#msg pre');
+        // pre.textContent = '\n' + JSON.stringify(currentScore, '\t', 2);
 
         //saving to localStorage
         localStorage.setItem('My Quiz Score', JSON.stringify(currentScore) );
