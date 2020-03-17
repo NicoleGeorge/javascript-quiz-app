@@ -1,6 +1,6 @@
 wk4 Homework Project- Javascript Quiz App
 
-<a href="https://www.canva.com/design/DAD2yjFyzaM/VsOo3WnyxwTL6y_KOGFyvw/view?utm_content=DAD2yjFyzaM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5>Project Brief Presentation</a>
+[Project Brief Presentation](https://www.canva.com/design/DAD2yjFyzaM/VsOo3WnyxwTL6y_KOGFyvw/view?utm_content=DAD2yjFyzaM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5)
 
 Brief:
 
