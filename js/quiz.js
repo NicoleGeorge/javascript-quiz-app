@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     //  TIMER FUNCTION
 
-        var timer = 10;
+        var timer = 30;
         var url = 'end.html';
 
         function countdown () {
