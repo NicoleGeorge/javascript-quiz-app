@@ -1,7 +1,9 @@
 wk4 Homework Project- Javascript Quiz App
 
-[Project Brief Presentation - app images included](https://www.canva.com/design/DAD2yjFyzaM/VsOo3WnyxwTL6y_KOGFyvw/view?utm_content=DAD2yjFyzaM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5)
+Student Brief & Final app images:
+[Project Brief Presentation](https://www.canva.com/design/DAD2yjFyzaM/VsOo3WnyxwTL6y_KOGFyvw/view?utm_content=DAD2yjFyzaM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#5)
 
+Final App:
 [Javascript Quiz App](https://nicolegeorge.github.io/javascript-quiz-app/)
 
 Brief:
