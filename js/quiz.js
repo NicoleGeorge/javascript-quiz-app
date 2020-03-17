@@ -56,7 +56,7 @@ $(document).ready(function() {
 
     //  TIMER FUNCTION
 
-        var timer = 20;
+        var timer = 10;
         var url = 'end.html';
 
         function countdown () {
@@ -106,24 +106,50 @@ function process(n) {
 
 // first attempt - keeping only for reference against new attempt if it works
 
-    var username = document.querySelector("username");
+    var username = document.querySelector("saveScoreBtn");
     var saveScoreButton = document.getElementById("saveScoreBtn");
     var results = document.getElementById('#results');
     var latestScore = localStorage.getItem('latest score');
 
     $('#finalScore').append(latestScore);
 
-    // username.addEventListener('keyup', () => {
+    // username.addEventListener('click', (e) => {
+    //     e.preventDefault();
     //     console.log(username.value);
     //     saveScoreBtn.disabled = !username.value;
-    //})
+    // })
 
-    // saveHighScore = e => {
-    //     // console.log("clicked the save button");
-    //     e.preventDefault();
-    // }
+    var currentScore = [];
 
+    var saveHighScore = e => {
+        // console.log("clicked the save button");
+        e.preventDefault();
+        let userScore = {
+            id: Date.now(),
+            username: document.getElementById('username').value,
+            score: document.getElementById('score').value,
+        }
+            currentScore.push(userScore);
+            document.forms[0].reset();
+            
+        // to clear the form for the next entries
+        // use - document.querySelector('form').reset();
 
+        //for display purposes only - checking that it's working
+        console.warn('added' , {currentScore} );
+        let pre = document.querySelector('#msg pre');
+        pre.textContent = '\n' + JSON.stringify(currentScore, '\t', 2);
+
+        //saving to localStorage
+        localStorage.setItem('My Quiz Score', JSON.stringify(currentScore) );
+
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('saveScoreBtn').addEventListener('click', saveHighScore);
+
+   
+        });
 // Add an event listener 
 
 window.addEventListener('load', init, false);

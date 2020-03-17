@@ -19,15 +19,33 @@
           <div class="float-left title">JavaScript Quiz</div>
           <div class="float-right name">by Nicole G</div>
         </header>
+        
         <!-- adding form for users to submit -->
-        <h3>Save your score to track you progress.</h3>
+        <h3>Save your score to track you progress.<br>PROGRESS > PERFECTION ;)</h3>
         <form>
-          <input type="text" class="usernameField" name="username" id="username" placeholder="username" >
-          <button type="submit" class="" id="saveScoreBtn">Save</button>
+          <div class="formBox">
+            <label for="name" class="enterName">Enter name</label>
+            <input type="text" id="username" placeholder="username" name="username" required />
+          </div>
+          <div class="formBox">
+            <label for="yr" class="enterScore">enter Score</label>
+            <input type="number" id="score" placeholder=""/>
+          </div>
+          <div>
+            <button type="submit" class="saveDetails" id="saveScoreBtn">Save</button>  
+          </div>
+          <div id="msg">
+            <pre></pre>
+          </div>
         </form>
         
-        <h3 id="finalScore" >Your Latest Score: </h3>
-        <ul></ul>
+        <!-- <h3>Your Results are in: </h3>
+        <h3>Username: <span id="user-name"></span></h3> -->
+        <h3>Your Latest Score is: <span id="finalScore"></span></h3>
+        
+        <!-- <ul></ul> -->
+        
+       
 
         <footer>
           <div class="float-left total">Total: 5 Questions </div>
