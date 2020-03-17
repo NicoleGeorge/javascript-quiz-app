@@ -1,0 +1,22 @@
+Pseuodo Code:
+
+> user must be able to opt-in and take the quiz (via button)
+> once they have opted in, a timer will start
+> this timer will count down from 30 seconds - the duration of the quiz 
+> user is then presented with one question per screen
+> questions are multiple-choice, with 4 possible options
+> quetion is based on Javascript fundamentals
+> when the user selects an answer, they must be able to select it
+> on selection of an answer, user must then submit their answer
+> user is then taken to the proceeding question.
+> this process repeats until all 5 questions have been answered
+> once the user hassubmitted their 5th and final answer
+> they will be presented with their final score
+> they will have the option to take the quiz again if they choose
+> this option will only be availabe IF the timer is still coutning down
+> once the timer reaches 0, the user will be redirected to the final page 
+> their fina score will be presented to them again, with the option of saving their
+  score under their chosen username.
+> the user will again have the option of taking the quiz again
+> their newer score will be added to their local storage to track their progress
+

@@ -12,10 +12,19 @@ h2 {
 
 h3 {
     font-size: 18px;
-    font-family: monospace;
+    font-family: 'IBM Plex Sans', sans-serif;
     margin: 20px 0;
-    padding: 20px 0px;
+    padding: 20px 20px;
     font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+span {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color:  #69cae8;
 }
 
 /* CONTAINER STYLES */
@@ -90,7 +99,7 @@ li {
 button {
     font-size: 12px;
     font-weight: 800;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     border: none;
     color:  #e66f20;
     background-color: #fff465;
@@ -168,12 +177,12 @@ p {
 
 .saveDetails {
     font-size: 18px;
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-family: 'IBM Plex Sans', sans-serif;
     border: none;
     color:  #e66f20;
     background-color: #fff465;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 15px 15px;
     margin: 15px;
 }
@@ -181,6 +190,20 @@ p {
 .saveDetails:hover {
     background-color: #e66f20;
     color: #fff465;
+}
+
+.endPage {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 25px;
+}
+
+#retake {
+    background-color: #fff465;
+    padding: 2px 5px;
+    text-decoration: none;
 }
 
 /* FOOTER STYLES */
@@ -241,5 +264,15 @@ footer {
 
     p .disclaimer {
         font-weight: lighter;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        margin: 20px 0;
+        padding: 20px 0px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
     }
 }

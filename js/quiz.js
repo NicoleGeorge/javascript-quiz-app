@@ -122,7 +122,7 @@ function process(n) {
     var currentScore = [];
 
     var saveHighScore = e => {
-        // console.log("clicked the save button");
+        // console.log("clicked the save button"); working!!
         e.preventDefault();
         let userScore = {
             id: Date.now(),
